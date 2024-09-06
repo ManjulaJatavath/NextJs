@@ -6,10 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "gh-pages -d out",
+    "predeploy": "next build" 
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
+    "gh-pages": "^6.1.1",
     "next": "14.2.6",
     "react": "^18",
     "react-dom": "^18"
@@ -23,5 +26,6 @@
     "postcss": "^8.4.45",
     "tailwindcss": "^3.4.10",
     "typescript": "^5"
-  }
+  },
+  "homepage": "https://ManjulaJatavath.github.io/NextJs"
 }

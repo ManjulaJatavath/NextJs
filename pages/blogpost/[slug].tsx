@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link';
-const slug = () => {
+const Slug = () => {
     const router = useRouter();    
     const  {slug}  = router.query;
     // console.log(router.query);
@@ -19,9 +19,9 @@ const slug = () => {
   )
 }
 
-export default slug
+export default Slug
 
-// BlogPost: {slug}
+// BlogPost: {Slug}
 // <h2>
 //   <Link href="/" className="text-blue-500 hover:underline">
 //     Back to home
