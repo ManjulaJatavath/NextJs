@@ -60,8 +60,6 @@ export async function getStaticProps(context:any) {
   };
 }
 
-
-
 // export async function getServerSideProps(context:any) {
 //   const { slug } = context.query;
 //   const data = await fetch(`http://localhost:3000/NextJs/api/getblog?slug=${slug}`)
