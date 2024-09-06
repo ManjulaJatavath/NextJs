@@ -20,7 +20,7 @@ const UsersList: React.FC<UsersListProps> = ({ users }) => {
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
       <main className="w-full max-w-4xl">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
-          {users?.map((user) => (
+          {users.map((user) => (
             <div
               key={user.id}
               className="bg-white p-6 rounded-lg shadow-md border border-gray-300 transition-transform transform hover:scale-105 hover:border-blue-500"
@@ -37,9 +37,7 @@ const UsersList: React.FC<UsersListProps> = ({ users }) => {
               </p>
               <a
                 className="text-blue-500 no-underline"
-                target="_blank"
-                href={`/user/${user.id}`}
-                rel="noopener noreferrer"
+                href={`/NextJs/user/${user.id}`}
               >
                 Know More
               </a>

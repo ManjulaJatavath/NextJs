@@ -1,10 +1,8 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  basePath: '/NextJs', // Base path for serving the app
-  assetPrefix: '/NextJs/', // Prefix for static assets
+  basePath: '/NextJs', 
+  assetPrefix: '/NextJs/', 
   images: {
-    unoptimized: true, // Disable image optimization
+    unoptimized: true, 
   },
 };
 

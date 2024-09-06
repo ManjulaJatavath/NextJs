@@ -1,30 +1,18 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-//http://localhost:3000/api/getblog?slug=how-to-learn-js
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
 
-import type { NextApiRequest, NextApiResponse } from "next";
-import { data } from 'autoprefixer';
+type Data = { title: string; content: string; author: string; slug: string } | { error: string };
 
-import * as fs from 'fs'; 
-import { error } from "console";
-type Data = string[] | { error: string };
-export default  async function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  let data =await fs.promises.readdir("blogdata")
-  let myfile;
-    for (let index = 0; index < data.length; index++) {
-      const item = data[index];
-      // console.log(item);
-      myfile= await fs.promises.readFile(('blogdata/' + item), 'utf-8')
-      // console.log(myfile);
-      
-  }
-  res.status(200).json(data);
+  const { slug } = req.query;
+    // const filePath = path.join(process.cwd(), 'blogdata', `${slug}.json`);
+    // const fileContent = await fs.promises.readFile(filePath, 'utf-8');
+    let getblog=await fs.promises.readFile(`blogdata/${slug}.json`, 'utf-8');
+    const blogData = JSON.parse(getblog);
+    res.status(200).json(blogData);
+
 }
-
-
-
-
-
-

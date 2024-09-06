@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "deploy": "gh-pages -d out",
-    "predeploy": "next build" 
+    "predeploy": "next build",
+    "export" : "next build && next export"
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
-import UsersList from "@/components/UsersList";
 import Head from 'next/head'; 
 // import Script from 'next/script';
 import Button from "@/components/Button";
@@ -50,14 +49,14 @@ const Home = ({ posts }: { posts: any[] }) => {
           Hunting Coder
         </h1>
         <div className="rounded-lg flex justify-center items-center">
-      <Image
-        src="/home.jpg"
+      {/* <Image
+        src="NextJs/home.jpg"
         alt="Description of the image"
         width={600}
         height={300}
-        layout="fixed" 
         className="object-cover rounded-lg shadow-md" // Image styles
-      />
+      /> */}
+      <img src="NextJs/home.jpg" alt="" />
     </div>
         <p className="text-xl mb-8">
           A blog for hunting coders by a hunting coder

@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-700 text-white p-4">
       <div className="container mx-auto flex justify-center md:justify-between items-center py-4 px-6 ">
-        <ul className="flex space-x-8 text-lg font-semibold">
+        <ul className="flex text-lg font-semibold space-x-10">
           <li>
             <Link href="/" className="text-white hover:text-blue-500 transition duration-300">
               Home
@@ -29,6 +29,11 @@ const Navbar = () => {
           <li>
             <Link href="/product/1" className="text-white hover:text-blue-500 transition duration-300">
               Product
+            </Link>
+          </li>
+          <li>
+            <Link href="/users" className="text-white hover:text-blue-500 transition duration-300">
+              Users
             </Link>
           </li>
         </ul>
